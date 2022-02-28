@@ -93,6 +93,9 @@ export const Name = styled.p`
 
   @media (min-width: 720px) {
     width: 113px;
+
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -189,4 +192,9 @@ export const CollaboratorButtonFooter = styled.div<IToggleCard>`
   }
 
   display: ${({ opened }) => (opened ? "inline" : "none")};
+`;
+
+export const IconWrapper = styled.button`
+  border: none;
+  background: transparent;
 `;

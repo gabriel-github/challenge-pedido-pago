@@ -21,6 +21,7 @@ import {
   Status,
   StatusText,
   Title,
+  IconWrapper,
 } from "./styles";
 
 interface Agent {
@@ -119,11 +120,9 @@ export function Collaborator({
           </Button>
         </CollaboratorButtonFooter>
       ) : (
-        <BiDotsVerticalRounded
-          size="24"
-          color="#587169"
-          onClick={openModalSeeCollaborator}
-        />
+        <IconWrapper onClick={openModalSeeCollaborator}>
+          <BiDotsVerticalRounded size="24" color="#587169" />
+        </IconWrapper>
       )}
     </Container>
   );
