@@ -12,8 +12,6 @@ export const Content = styled.div`
 `;
 
 export const Header = styled.div`
-  width: 100%;
-
   display: flex;
   align-items: center;
 
@@ -32,10 +30,9 @@ export const Title = styled.h1`
   color: #34423d;
   font-weight: 600;
   line-height: 24px;
+  margin-left: 16px;
 
   @media (min-width: 720px) {
-    margin-left: 16px;
-
     font-size: 32px;
     line-height: 32px;
   }

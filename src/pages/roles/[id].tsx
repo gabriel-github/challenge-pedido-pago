@@ -1,22 +1,22 @@
-import { GetServerSideProps, GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 import {
   Content,
-  NewRole,
-  NewRoleSection,
-  Title,
-  RoleData,
-  RoleTitle,
-  ListRoles,
-  ListTitle,
   Header,
-  RolesHeader,
   HeaderText,
-  ListItem,
-  ItemText,
   InputRole,
   InputRoleLabel,
   InputsWrapper,
+  ItemText,
+  ListItem,
+  ListRoles,
+  ListTitle,
+  NewRole,
+  NewRoleSection,
+  RoleData,
+  RolesHeader,
+  RoleTitle,
   SelectDepartmentWrapper,
+  Title,
 } from "../../../styles/newRole";
 import { BackButton } from "../../components/BackButton";
 import { CheckBox } from "../../components/Checkbox";
@@ -45,7 +45,7 @@ export default function Role({ data }: IResponseData) {
   return (
     <Content>
       <Header>
-        {width && width > 720 && <BackButton routeOfBack="/roles" />}
+        <BackButton routeOfBack="/roles" />
         <Title>
           {width && width > 720 ? "Cargos e permissões" : "Novo cargo"}
         </Title>

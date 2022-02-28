@@ -86,6 +86,12 @@ export default function Home({ items }: IResponseData) {
     setCurrentPage((oldCurrentPage) => oldCurrentPage - 1);
   }
 
+  function loadMore() {
+    setCollaboratorsPerPage(
+      (oldCollaboratorsPerPage) => oldCollaboratorsPerPage + 3
+    );
+  }
+
   return (
     <>
       <Content>
@@ -164,7 +170,11 @@ export default function Home({ items }: IResponseData) {
             </ListCollaboratorsSection>
 
             <LoadMoreButtonWrapper>
-              <Button text="Carregar mais">
+              <Button
+                text="Carregar mais"
+                disabled={collaboratorsPerPage === items.length}
+                onClick={loadMore}
+              >
                 <FiRefreshCcw size="24" color="#1DD195" />
               </Button>
             </LoadMoreButtonWrapper>
